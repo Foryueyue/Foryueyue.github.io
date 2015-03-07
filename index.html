@@ -4,7 +4,58 @@
 </head>
 
 <body>
-	月月！
+	<script>
+		document.write('We are together at 2013-4-28 22:04:31'+'</br>');
+		var togetherDate = '22:04:31 Apr 28, 2013';
+		var togetherDatemm = Date.parse(togetherDate);
+		var myDate = new Date();
+		myDate.getYear();        //获取当前年份(2位)
+		myDate.getFullYear();    //获取完整的年份(4位,1970-????)
+		myDate.getMonth();       //获取当前月份(0-11,0代表1月)
+		myDate.getDate();        //获取当前日(1-31)
+		myDate.getDay();         //获取当前星期X(0-6,0代表星期天)
+		myDate.getTime();        //获取当前时间(从1970.1.1开始的毫秒数)
+		myDate.getHours();       //获取当前小时数(0-23)
+		myDate.getMinutes();     //获取当前分钟数(0-59)
+		myDate.getSeconds();     //获取当前秒数(0-59)
+		myDate.getMilliseconds();    //获取当前毫秒数(0-999)
+		document.write('Now is '+myDate.getFullYear()+'-'
+						+(myDate.getMonth()+1)+'-'
+						+myDate.getDay()+' ');
+		if (myDate.getHours()<10)
+			document.write('0');
+		document.write(myDate.getHours()+':');
+		if (myDate.getMinutes()<10)
+			document.write('0');
+		document.write(myDate.getMinutes()+':');
+		if (myDate.getSeconds()<10)
+			document.write('0');
+		document.write(myDate.getSeconds()+'</br>');
+
+		var nowmm = myDate.getTime();
+		var duringmm = nowmm - togetherDatemm;
+
+		document.write('We have already been together for ');
+		document.write(parseInt(duringmm/86400000)+'days,');
+		duringmm = duringmm%86400000;
+		var hours = parseInt(duringmm/3600000);
+		if (hours<10)
+			document.write('0');
+		document.write(parseInt(duringmm/3600000)+':');
+		duringmm = duringmm%3600000;
+		var mins = parseInt(duringmm/60000);
+		if (mins<10)
+			document.write('0');
+		document.write(parseInt(duringmm/60000)+':');
+		duringmm = duringmm%60000;
+		var secs = parseInt(duringmm/1000);
+		if (secs<10)
+			document.write('0');
+		document.write(parseInt(duringmm/1000)+'</br>');
+
+		document.write('I love u, baby Yue!');
+		//myDate.toLocaleString( );        //获取日期与时间
+	</script>
 </body>
 
 </html>
