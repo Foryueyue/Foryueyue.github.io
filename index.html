@@ -8,6 +8,7 @@
 		document.write('We are together at 2013-4-28 22:04:31'+'</br>');
 		var togetherDate = '22:04:31 Apr 28, 2013';
 		var togetherDatemm = Date.parse(togetherDate);
+		var togetherDatemm = 1367157871000;
 		var myDate = new Date();
 		myDate.getYear();        //获取当前年份(2位)
 		myDate.getFullYear();    //获取完整的年份(4位,1970-????)
@@ -34,6 +35,7 @@
 
 		var nowmm = myDate.getTime();
 		var duringmm = nowmm - togetherDatemm;
+		//document.write(togetherDatemm+'</br>');
 
 		document.write('We have already been together for ');
 		document.write(parseInt(duringmm/86400000)+'days,');
